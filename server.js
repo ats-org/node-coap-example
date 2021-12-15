@@ -9,8 +9,6 @@ function init() {
         console.log(m);
     });
     server.on('request', (req) => {
-        let buf = Buffer.from(req.payload);
-        //console.log('buff', buf.toString());
         try {
             let parsed = mp.decode(req.payload);
             console.log('parsed', parsed);

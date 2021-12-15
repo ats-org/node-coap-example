@@ -4,12 +4,13 @@
   "description": "Very simple coap messagepack client server example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Braydon Harris",
   "license": "ISC",
   "dependencies": {
     "@msgpack/msgpack": "^2.7.1",
-    "coap": "^0.25.0"
+    "coap": "^0.26.0"
   }
 }
