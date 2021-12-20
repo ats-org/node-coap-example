@@ -1,9 +1,14 @@
+// REquire dependencies
 const coap = require('coap');
 const mp = require("@msgpack/msgpack");
+
+// Set global variables
 const server = coap.createServer()
 
+// send server request
 server.listen(() => {
-    var req = coap.request({
+    // form CoAP request 
+    let req = coap.request({
         observe: false,
         host: 'localhost',
         pathname: '/',
@@ -12,10 +17,14 @@ server.listen(() => {
         // options: {
         //     "Content-Format": 'application/json'
         // }  
-    })  
-    var payload = {
+    });
+
+    // Define exampel payload
+    let payload = {
         username: 'aniu',
     }
+
+    // Encode payload with messagepack and send the request
     req.write(mp.encode(payload));
     req.end();
 });
